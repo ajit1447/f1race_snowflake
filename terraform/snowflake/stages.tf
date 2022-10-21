@@ -4,7 +4,7 @@ resource "snowflake_stage" "s3_circuits" {
   database    = snowflake_schema.f1race_raw.database
   schema      = snowflake_schema.f1race_raw.name
   storage_integration  = "S3_F1RACE_RAW"
-  file_format         = "(FORMAT_NAME = F1RACE_DB_PROD.F1RACE_RAW.CSV_FILE_FORMAT)"#"TYPE = CSV"
+  file_format         = "TYPE = CSV"
 }
 
 # resource "snowflake_stage" "s3_races" {
