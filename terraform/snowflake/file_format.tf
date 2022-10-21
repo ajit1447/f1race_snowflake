@@ -1,5 +1,5 @@
 resource "snowflake_file_format" "csv_file_format" {
-  name        = "csv_file_format"
+  name        = "CSV_FILE_FORMAT"
   database    = snowflake_schema.f1race_raw.database
   schema      = snowflake_schema.f1race_raw.name
   format_type = "CSV"
@@ -19,7 +19,7 @@ resource "snowflake_file_format" "csv_file_format" {
 
 
 resource "snowflake_file_format" "json_file_format" {
-  name        = "json_file_format"
+  name        = "JSON_FILE_FORMAT"
   database    = snowflake_schema.f1race_raw.database
   schema      = snowflake_schema.f1race_raw.name
   format_type = "JSON"
@@ -28,7 +28,7 @@ resource "snowflake_file_format" "json_file_format" {
 }
 
 resource "snowflake_file_format" "json_file_format_1" {
-  name        = "json_file_format_1"
+  name        = "JSON_FILE_FORMAT_1"
   database    = snowflake_schema.f1race_raw.database
   schema      = snowflake_schema.f1race_raw.name
   format_type = "JSON"

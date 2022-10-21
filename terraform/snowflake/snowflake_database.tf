@@ -1,3 +1,3 @@
-resource "snowflake_database" "f1race_db_prod" {
-  name     = "f1race_db_prod"
+resource "snowflake_database" "F1RACE_DB_PROD" {
+  name     = "F1RACE_DB_PROD"
 }
