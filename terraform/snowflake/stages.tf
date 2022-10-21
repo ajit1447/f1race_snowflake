@@ -7,6 +7,7 @@ resource "snowflake_stage" "s3_circuits" {
   file_format         = "TYPE = CSV"
 }
 
+
 # resource "snowflake_stage" "s3_races" {
 #   name        = "s3_races"
 #   url         = "s3://f1race/raw/races.csv"
