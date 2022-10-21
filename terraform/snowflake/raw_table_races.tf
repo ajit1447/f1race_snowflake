@@ -1,4 +1,4 @@
-resource "snowflake_table" "table" {
+resource "snowflake_table" "raw_races" {
   database            = snowflake_schema.f1race_raw.database
   schema              = snowflake_schema.f1race_raw.name
   name                = "RACES"

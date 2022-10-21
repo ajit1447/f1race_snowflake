@@ -1,4 +1,4 @@
-resource "snowflake_table" "table" {
+resource "snowflake_table" "raw_lap_times" {
   database            = snowflake_schema.f1race_raw.database
   schema              = snowflake_schema.f1race_raw.name
   name                = "LAP_TIMES"
