@@ -8,32 +8,32 @@ resource "snowflake_table" "raw_circuits" {
 
   column {
     name     = "CIRCUITID"
-    type     = "int"
+    type     = "NUMBER(38,0)"
     nullable = true
   }
 
   
   column {
     name     = "CIRCUITREF"
-    type     = "varchar(50)"
+    type     = "VARCHAR(50)"
     nullable = true
   }
 
   column {
     name     = "NAME"
-    type     = "varchar(100)"
+    type     = "VARCHAR(100)"
     nullable = true
   }
 
    column {
     name     = "LOCATION"
-    type     = "varchar(100)"
+    type     = "VARCHAR(100)"
     nullable = true
   }
 
    column {
     name     = "COUNTRY"
-    type     = "varchar(100)"
+    type     = "VARCHAR(100)"
     nullable = true
   }
 
@@ -51,13 +51,13 @@ resource "snowflake_table" "raw_circuits" {
 
   column {
     name    = "ALT"
-    type    = "INT"
+    type    = "NUMBER(38,0)"
     nullable = true
   }
 
   column {
     name    = "URL"
-    type    = "varchar(100)"
+    type    = "VARCHAR(100)"
     nullable = true
   }
 }
