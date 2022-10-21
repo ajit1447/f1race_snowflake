@@ -10,7 +10,9 @@ resource "snowflake_file_format" "csv_file_format" {
   field_optionally_enclosed_by = "\""
   compression = "AUTO"
   record_delimiter = "\n"
+  binary_format = "HEX"
 }
+
 
 
 resource "snowflake_file_format" "json_file_format" {
