@@ -49,7 +49,7 @@ resource "snowflake_stage" "s3_constructors" {
   database    = snowflake_schema.f1race_raw.database
   schema      = snowflake_schema.f1race_raw.name
   storage_integration  = "s3_f1race_raw"
-  file_format = "format_name = " +snowflake_file_format.json_file_format.name
+  file_format = "format_name = ${snowflake_file_format.json_file_format.name}"
 }
 
 resource "snowflake_stage" "s3_qualifying" {
