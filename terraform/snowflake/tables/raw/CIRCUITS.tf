@@ -12,6 +12,7 @@ resource "snowflake_table" "table" {
     nullable = true
   }
 
+  
   column {
     name     = "CIRCUITREF"
     type     = "varchar(50)"
