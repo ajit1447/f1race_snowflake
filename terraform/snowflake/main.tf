@@ -7,6 +7,7 @@ terraform {
   }
 }
 
+
 provider "snowflake" {
   role  = "ACCOUNTADMIN"
   account=var.account
