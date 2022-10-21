@@ -8,37 +8,37 @@ resource "snowflake_table" "raw_lap_times" {
 
   column {
     name     = "RACEID"
-    type     = "int"
+    type     = "NUMBER(38,0)"
     nullable = true
   }
 
   column {
     name     = "DRIVERID"
-    type     = "int"
+    type     = "NUMBER(38,0)"
     nullable = true
   }
 
   column {
     name     = "LAP"
-    type     = "int"
+    type     = "NUMBER(38,0)"
     nullable = true
   }
 
   column {
     name     = "POSITION"
-    type     = "int"
+    type     = "NUMBER(38,0)"
     nullable = true
   }
 
   column {
     name     = "TIME"
-    type     = "varchar(50)"
+    type     = "VARCHAR(50)"
     nullable = true
   }
 
   column {
     name     = "MILISECONDS"
-    type     = "int"
+    type     = "NUMBER(38,0)"
     nullable = true
   }
   

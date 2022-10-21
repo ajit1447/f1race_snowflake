@@ -8,7 +8,7 @@ resource "snowflake_table" "raw_qualifying" {
 
   column {
     name     = "json_data"
-    type     = "variant"
+    type     = "VARIANT"
     nullable = true
   }
   

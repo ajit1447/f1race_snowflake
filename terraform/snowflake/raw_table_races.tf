@@ -8,53 +8,50 @@ resource "snowflake_table" "raw_races" {
 
   column {
     name     = "RACEID"
-    type     = "int"
+    type     = "NUMBER(38,0)"
     nullable = true
   }
 
   column {
     name     = "YEAR"
-    type     = "int"
+    type     = "NUMBER(38,0)"
     nullable = true
   }
 
   column {
     name     = "ROUND"
-    type     = "int"
+    type     = "NUMBER(38,0)"
     nullable = true
   }
 
   column {
     name     = "CIRCUITID"
-    type     = "int"
+    type     = "NUMBER(38,0)"
     nullable = true
   }
   
   column {
     name     = "NAME"
-    type     = "varchar(100)"
+    type     = "VARCHAR(100)"
     nullable = true
   }
 
   column {
     name     = "DATE"
-    type     = "date"
+    type     = "DATE"
     nullable = true
   }
 
   column {
     name     = "TIME"
-    type     = "varchar(100)"
+    type     = "VARCHAR(100)"
     nullable = true
   }
 
   column {
     name     = "URL"
-    type     = "varchar(200)"
+    type     = "VARCHAR(200)"
     nullable = true
   }
   
 }
-
-
-
