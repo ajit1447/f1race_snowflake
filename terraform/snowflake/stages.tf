@@ -3,7 +3,7 @@ resource "snowflake_stage" "s3_circuits" {
   url         = "s3://f1race/raw/circuits.csv"
   database    = snowflake_schema.f1race_raw.database
   schema      = snowflake_schema.f1race_raw.name
-  storage_integration  = "s3_f1race_raw"
+  storage_integration  = var.storage_integration
   file_format = "TYPE = CSV"
 }
 
