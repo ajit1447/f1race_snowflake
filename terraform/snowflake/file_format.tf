@@ -12,6 +12,7 @@ resource "snowflake_file_format" "csv_file_format" {
   record_delimiter = "\n"
   binary_format = "HEX"
   escape = "NONE"
+  escape_unenclosed_field = "\\"
 }
 
 
