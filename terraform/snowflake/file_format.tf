@@ -10,6 +10,7 @@ resource "snowflake_file_format" "csv_file_format" {
   field_optionally_enclosed_by = "\""
 }
 
+
 resource "snowflake_file_format" "json_file_format" {
   name        = "json_file_format"
   database    = snowflake_schema.f1race_raw.database
