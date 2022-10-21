@@ -11,6 +11,7 @@ resource "snowflake_file_format" "csv_file_format" {
   compression = "AUTO"
   record_delimiter = "\n"
   binary_format = "HEX"
+  escape = "NONE"
 }
 
 
