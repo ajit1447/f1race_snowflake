@@ -8,7 +8,8 @@ resource "snowflake_file_format" "csv_file_format" {
   null_if = ["NULL","null"]
   empty_field_as_null = true
   field_optionally_enclosed_by = "\""
-  compression = "NONE"
+  compression = "AUTO"
+  record_delimiter = "\n"
 }
 
 
@@ -17,7 +18,8 @@ resource "snowflake_file_format" "json_file_format" {
   database    = snowflake_schema.f1race_raw.database
   schema      = snowflake_schema.f1race_raw.name
   format_type = "JSON"
-  compression = "NONE"
+  compression = "AUTO"
+  binary_format = "HEX"
 }
 
 resource "snowflake_file_format" "json_file_format_1" {
@@ -26,7 +28,8 @@ resource "snowflake_file_format" "json_file_format_1" {
   schema      = snowflake_schema.f1race_raw.name
   format_type = "JSON"
   strip_outer_array = true
-  compression = "NONE"
+  compression = "AUTO"
+  binary_format = "HEX"
 }
     
     
