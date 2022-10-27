@@ -22,7 +22,7 @@ resource "snowflake_stage" "s3_circuits" {
   database    = snowflake_schema.f1race_raw.database
   schema      = snowflake_schema.f1race_raw.name
   storage_integration  = "S3_F1RACE_RAW"
-  file_format         = " SKIP_HEADER = 1 FIELD_OPTIONALLY_ENCLOSED_BY = '\"' NULL_IF = [NULL, null] "
+  file_format         = " SKIP_HEADER = 1  NULL_IF = ('NULL','null')  FIELD_OPTIONALLY_ENCLOSED_BY = '\"'  "
 }
 
 resource "snowflake_stage" "s3_races" {
