@@ -1,20 +1,20 @@
-# resource "snowflake_stage" "s3_circuits" {
-#   name        = "S3_CIRCUITS"
-#   url         = "s3://f1race/raw/circuits.csv"
-#   database    = snowflake_schema.f1race_raw.database
-#   schema      = snowflake_schema.f1race_raw.name
-#   storage_integration  = "S3_F1RACE_RAW"
-#   file_format         = "FIELD_DELIMITER = |"
-# }
-
 resource "snowflake_stage" "s3_circuits" {
   name        = "S3_CIRCUITS"
   url         = "s3://f1race/raw/circuits.csv"
   database    = snowflake_schema.f1race_raw.database
   schema      = snowflake_schema.f1race_raw.name
   storage_integration  = "S3_F1RACE_RAW"
-  file_format         = " SKIP_HEADER = 1  NULL_IF = ('NULL','null')  FIELD_OPTIONALLY_ENCLOSED_BY = '\"' "
+  file_format         = snowflake_file_format.csv_file_format.name
 }
+
+# resource "snowflake_stage" "s3_circuits" {
+#   name        = "S3_CIRCUITS"
+#   url         = "s3://f1race/raw/circuits.csv"
+#   database    = snowflake_schema.f1race_raw.database
+#   schema      = snowflake_schema.f1race_raw.name
+#   storage_integration  = "S3_F1RACE_RAW"
+#   file_format         = " SKIP_HEADER = 1  NULL_IF = ('NULL','null')  FIELD_OPTIONALLY_ENCLOSED_BY = '\"' "
+# }
 
 # resource "snowflake_stage" "s3_races" {
 #   name        = "s3_races"
