@@ -4,17 +4,9 @@
 #   database    = snowflake_schema.f1race_raw.database
 #   schema      = snowflake_schema.f1race_raw.name
 #   storage_integration  = "S3_F1RACE_RAW"
-#   file_format         = "FIELD_DELIMITER = |"
+#   file_format         = "FIELD_DELIMITER = , skip_header = 1 null_if = ('NULL','null') empty_field_as_null = TRUE FIELD_OPTIONALLY_ENCLOSED_BY = \" "
 # }
 
-resource "snowflake_stage" "s3_circuits" {
-  name        = "S3_CIRCUITS"
-  url         = "s3://f1race/raw/circuits.csv"
-  database    = snowflake_schema.f1race_raw.database
-  schema      = snowflake_schema.f1race_raw.name
-  storage_integration  = "S3_F1RACE_RAW"
-  file_format         = "FIELD_DELIMITER = , skip_header = 1 null_if = ('NULL','null') empty_field_as_null = TRUE FIELD_OPTIONALLY_ENCLOSED_BY = \" "
-}
 
 # resource "snowflake_stage" "s3_races" {
 #   name        = "s3_races"
