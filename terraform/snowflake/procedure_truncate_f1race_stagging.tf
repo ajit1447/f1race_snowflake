@@ -18,7 +18,6 @@ declare
     begin
     
     case when p_force=true  then
-    
     TRUNCATE TABLE IF EXISTS pit_stops;
     TRUNCATE TABLE IF EXISTS constructors;
     TRUNCATE TABLE IF EXISTS circuits;
@@ -41,5 +40,6 @@ declare
     end;
     
      return force_delete;
+     end;
 EOT
 }
