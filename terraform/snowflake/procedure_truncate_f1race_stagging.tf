@@ -17,7 +17,7 @@ declare
     force_delete varchar;
     begin
     
-    case when p_force=true  then
+    #  case when p_force=true  then
     
     TRUNCATE TABLE IF EXISTS pit_stops;
     TRUNCATE TABLE IF EXISTS constructors;
@@ -28,7 +28,7 @@ declare
     TRUNCATE TABLE IF EXISTS qualifying;
     TRUNCATE TABLE IF EXISTS races;
     force_delete:= ''force true'';
-    else
+    # else
     delete from pit_stops;
     delete from constructors;
     delete from circuits;
@@ -38,7 +38,7 @@ declare
     delete from qualifying;
     delete from races;
     force_delete:= ''force false'';
-    end;
+    # end;
     
      return force_delete;
     
