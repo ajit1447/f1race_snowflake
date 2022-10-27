@@ -27,7 +27,7 @@ declare
     TRUNCATE TABLE IF EXISTS results;
     TRUNCATE TABLE IF EXISTS qualifying;
     TRUNCATE TABLE IF EXISTS races;
-    force_delete:= 'force true';
+    force_delete:= ''force true'';
     else
     delete from pit_stops;
     delete from constructors;
@@ -37,7 +37,7 @@ declare
     delete from results;
     delete from qualifying;
     delete from races;
-    force_delete:= 'force false';
+    force_delete:= ''force false'';
     end;
     
      return force_delete;
