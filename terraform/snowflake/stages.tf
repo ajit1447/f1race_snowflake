@@ -22,7 +22,7 @@ resource "snowflake_stage" "s3_circuits" {
   database    = snowflake_schema.f1race_raw.database
   schema      = snowflake_schema.f1race_raw.name
   storage_integration  = "S3_F1RACE_RAW"
-  file_format         = " SKIP_HEADER = 1 FIELD_OPTIONALLY_ENCLOSED_BY = \\\" NULL_IF = [NULL, null] "
+  file_format         = " SKIP_HEADER = 1 FIELD_OPTIONALLY_ENCLOSED_BY = '\"' NULL_IF = [NULL, null] "
 }
 
 resource "snowflake_stage" "s3_races" {
@@ -49,7 +49,7 @@ resource "snowflake_stage" "s3_drivers" {
   database    = snowflake_schema.f1race_raw.database
   schema      = snowflake_schema.f1race_raw.name
   storage_integration  = "S3_F1RACE_RAW"
-  file_format = "TYPE = JSON"
+  file_format = "TYPE = JSON NULL_IF = []"
 }
 
 resource "snowflake_stage" "s3_pit_stops" {
@@ -58,7 +58,7 @@ resource "snowflake_stage" "s3_pit_stops" {
   database    = snowflake_schema.f1race_raw.database
   schema      = snowflake_schema.f1race_raw.name
   storage_integration  = "S3_F1RACE_RAW"
-  file_format = "TYPE = JSON STRIP_OUTER_ARRAY = TRUE"
+  file_format = "TYPE = JSON STRIP_OUTER_ARRAY = TRUE NULL_IF = []"
 }
 resource "snowflake_stage" "s3_constructors" {
   name        = "s3_constructors"
@@ -66,7 +66,7 @@ resource "snowflake_stage" "s3_constructors" {
   database    = snowflake_schema.f1race_raw.database
   schema      = snowflake_schema.f1race_raw.name
   storage_integration  = "S3_F1RACE_RAW"
-  file_format = "TYPE = JSON"
+  file_format = "TYPE = JSON NULL_IF = []"
   }
 
 resource "snowflake_stage" "s3_qualifying" {
@@ -75,7 +75,7 @@ resource "snowflake_stage" "s3_qualifying" {
   database    = snowflake_schema.f1race_raw.database
   schema      = snowflake_schema.f1race_raw.name
   storage_integration  = "S3_F1RACE_RAW"
-  file_format = "TYPE = JSON STRIP_OUTER_ARRAY = TRUE"
+  file_format = "TYPE = JSON STRIP_OUTER_ARRAY = TRUE NULL_IF = []"
 }
 
 resource "snowflake_stage" "s3_results" {
@@ -84,5 +84,5 @@ resource "snowflake_stage" "s3_results" {
   database    = snowflake_schema.f1race_raw.database
   schema      = snowflake_schema.f1race_raw.name
   storage_integration  = "S3_F1RACE_RAW"
-  file_format = "TYPE = JSON"
+  file_format = "TYPE = JSON NULL_IF = []"
 }
